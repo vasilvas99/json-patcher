@@ -28,7 +28,7 @@ fn main() {
             let patch: serde_json::Value = serde_json::from_str(&patch).unwrap();
 
             merge_json(&mut template, &patch);
-            println!("{}", serde_json::to_string(&template).unwrap())
+            println!("{}", serde_json::to_string_pretty(&template).unwrap())
         }
         Action::Diff { source, target } => {
             let source = std::fs::read_to_string(source).unwrap();
