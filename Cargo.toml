@@ -1,12 +1,11 @@
 [package]
 name = "json-patcher"
+description = "Create and merge json patches on the cli according with IETF-RFC7396"
 version = "0.1.0"
 edition = "2021"
-
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 merge-jsons = {git = "https://github.com/vasilvas99/json_merge_patch_rs"}
 clap = {version = "3.2.23", features = ["derive"]}
 serde_json = "1.0.91"
-anyhow = "1.0.68"
