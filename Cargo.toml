@@ -1,6 +1,6 @@
 [package]
 name = "json-patcher"
-description = "Create and merge json patches on the cli according with IETF-RFC7396"
+description = "Create and merge json patches on the cli according to IETF-RFC7396"
 version = "0.1.0"
 edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
