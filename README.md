@@ -1,5 +1,7 @@
 # JSON Merge-Patcher
 
+Download the latest artifacts for Windows/Linux: [here](https://nightly.link/vasilvas99/json-patcher/workflows/rust/master/json-patcher.zip)
+
 A cli tool that implements IETF-RFC7396 (the json-merge-patch). Takes two file paths as arguments and
 either applies a patch or diffs the two jsons to generate the patch:
 
