@@ -5,15 +5,26 @@ use std::path::PathBuf;
 
 #[derive(Parser)]
 #[clap(version, about)]
-
 struct Args {
     #[clap(subcommand)]
     action: Action,
 }
 #[derive(Subcommand)]
 enum Action {
-    Patch { template: PathBuf, patch: PathBuf },
-    Diff { source: PathBuf, target: PathBuf },
+    /// Apply a patch to a template
+    Patch {
+        /// The path to the source template that will be patched
+        template: PathBuf,
+        /// The path to the patch
+        patch: PathBuf,
+    },
+    /// Generate a patch from a template and a "target"
+    Diff {
+        /// The path to the template that will be "filled in" with the generated patch
+        source: PathBuf,
+        /// The path to the target that will be obtained after applying the generated patch to the template
+        target: PathBuf,
+    },
 }
 
 fn main() {
